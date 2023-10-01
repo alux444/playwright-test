@@ -31,7 +31,7 @@ test("get started link", async ({ page }) => {
     firstAddButton.click();
 
     //wait for results
-    await new Promise((resolve) => setTimeout(resolve, 4000));
+    await page.waitForTimeout(4000);
 
     // Fill the search bar with junk value
     await page
@@ -39,7 +39,7 @@ test("get started link", async ({ page }) => {
         .fill("jndkaknjvknjvdknsjvnkjdaadsaaidss");
 
     //wait for results
-    await new Promise((resolve) => setTimeout(resolve, 4000));
+    await page.waitForTimeout(4000);
 
     //expect no results for junk search
     await expect(page.getByText("Your search had no results :(")).toBeVisible();
@@ -60,4 +60,15 @@ test("get started link", async ({ page }) => {
 
     //close tutorial
     await page.getByRole("button", { name: "×" }).click();
+
+    //go to artists
+    await page.getByRole("button", { name: "Artists" }).click();
+
+    //type into searchbar with new placeholder
+    await page.getByPlaceholder("Search for Artist").fill("kanye");
+
+    await page.waitForTimeout(1000);
+
+    //click add button from first artist result
+    await page.locator('[id="artistAddButton"]').first().click();
 });
