@@ -11,4 +11,10 @@ toHaveText - element matches text
 toContainText - element contains text
 toHaveValue - input has value
 toHaveCount - list of elements has given length
+
+negative assertion - expect(locator).not.toHaveAttribute()
+
+soft assertion - expect.soft(locator).toHaveAttribute()
+Doesn't end tests
+
 more - https://playwright.dev/docs/test-assertions
