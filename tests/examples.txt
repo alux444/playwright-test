@@ -1,2 +1,14 @@
 npx playwright codegen --device "DeviceName"
 ^ automatic code generator
+
+toHaveURL - page toHaveURL
+toHaveTitle - page title
+toBeVisible - element visible
+toBeEnabled / toBeDisabled - disabled status of element (i.e button)
+toBeChecked - radio input checked status
+toHaveAttribute - element has attribute
+toHaveText - element matches text
+toContainText - element contains text
+toHaveValue - input has value
+toHaveCount - list of elements has given length
+more - https://playwright.dev/docs/test-assertions

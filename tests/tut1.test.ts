@@ -47,6 +47,10 @@ test("Locator Testing", async ({ page }) => {
     );
 
     console.log("Results size:" + songRes.length);
+
+    const listOfRes = page.locator(".songDisplay");
+    expect(listOfRes).toHaveCount(8);
+
     for (const song of songRes) {
         console.log(await song.textContent());
     }
