@@ -1,0 +1,2 @@
+npx playwright codegen --device "DeviceName"
+^ automatic code generator
