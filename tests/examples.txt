@@ -24,3 +24,5 @@ await page.locator('selectelement').selectOption({label: x})
 ({value :x})
 ({index :x})
 ("Text") visible text
+select multiple
+page.selectOption('selectElement', ['x','y','z']) array of visible text on options
