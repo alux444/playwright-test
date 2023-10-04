@@ -18,3 +18,9 @@ soft assertion - expect.soft(locator).toHaveAttribute()
 Doesn't end tests
 
 more - https://playwright.dev/docs/test-assertions
+
+selecting option from dropdown
+await page.locator('selectelement').selectOption({label: x})
+({value :x})
+({index :x})
+("Text") visible text
