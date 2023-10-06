@@ -23,4 +23,21 @@ test("frame test", async ({ page }) => {
     await inputbox.fill("Freddy");
 
     await page.waitForTimeout(3000);
+
+    //nested frames
+    const frame3 = await page.frame({
+        url: "https://ui.vision/demo/webtest/frames/frame_3.html",
+    });
+
+    await frame3?.locator("[name='mytext3']").fill("helloajdnjs");
+
+    await page.waitForTimeout(3000);
+
+    //child frames
+    const childFrames = frame3?.childFrames();
+    if (childFrames) {
+        await childFrames[0].locator("//*[@id='i8']/div[3]/div").check();
+    }
+
+    await page.waitForTimeout(3000);
 });
