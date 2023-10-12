@@ -27,4 +27,7 @@ await page.locator('selectelement').selectOption({label: x})
 select multiple
 page.selectOption('selectElement', ['x','y','z']) array of visible text on options
 
- npx playwright test frame.test --project chromium --headed
+npx playwright test frame.test --project chromium --headed
+
+trace viewer:
+npx playwright show-trace test-results/tracing-tracing-chromium/trace.zip 
