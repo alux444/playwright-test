@@ -31,3 +31,8 @@ npx playwright test frame.test --project chromium --headed
 
 trace viewer:
 npx playwright show-trace test-results/tracing-tracing-chromium/trace.zip 
+
+running tests off tags:
+npx playwright test --grep @tagname
+excluding reg tag:
+npx playwright test --grep @tag --grep-invert @reg 
