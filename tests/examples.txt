@@ -36,3 +36,5 @@ running tests off tags:
 npx playwright test --grep @tagname
 excluding reg tag:
 npx playwright test --grep @tag --grep-invert @reg 
+
+annotations
