@@ -9,7 +9,7 @@ test("pom", async ({ page }) => {
     //login using pom
     const login = new LoginPage(page);
     await login.gotoLoginPage();
-    // await login.login("youngtimmy", "123456");
+    await login.login("youngtimmy", "123456");
 
     await page.waitForTimeout(3000);
 
