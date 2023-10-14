@@ -37,4 +37,14 @@ npx playwright test --grep @tagname
 excluding reg tag:
 npx playwright test --grep @tag --grep-invert @reg 
 
-annotations
+reporters in config:
+list - list of run commands
+line - specific line of error
+dot - dots representing each test
+html (default) - opens html file with more info
+json - json report
+reporter: [['json', { outputFile: 'results.json' }]],
+junit - xml report
+reporter: [['junit', { outputFile: 'results.xml' }]],
+
+github actions: reporter: process.env.CI ? 'github' : 'list',
